@@ -101,6 +101,17 @@ app.include_router(upload.router, prefix="/api/v1", tags=["upload"])
 app.include_router(chat.router,   prefix="/api/v1", tags=["chat"])
 
 
+@app.get("/", tags=["root"])
+async def root():
+    return {
+        "name": "Multimodal RAG Pipeline for Razorpay Submission",
+        "status": "online",
+        "version": "0.1.0",
+        "docs_url": "/docs",
+        "health_url": "/health"
+    }
+
+
 @app.get("/health", tags=["health"])
 async def health():
     return {"status": "ok", "version": "0.1.0"}
