@@ -2,6 +2,17 @@
 
 This guide provides complete instructions to set up, configure, and run the **Multimodal RAG Pipeline by LangGraph** (FastAPI Backend + React Frontend + PostgreSQL + AI Services) locally or via Docker for development and hackathon presentations.
 
+> [!IMPORTANT]
+> **Mandatory API Keys & Services for Minimal Viable Product (MVP)**
+> In order to run this project successfully end-to-end as an MVP, ensure you have configured the following required APIs in your `.env` file:
+> 1. **Hugging Face Token (`HF_TOKEN`)**: Required to load and initialize embedding models (`all-MiniLM-L6-v2`) for semantic vector search.
+> 2. **Groq API Key (`GROQ_API_KEY`)**: Required for LLM reasoning (planner, generator, summarizer), Whisper audio transcription, and vision processing.
+> 3. **Tavily API Key (`TAVILY_API_KEY`)**: Required for live web search queries and external retrieval.
+> 4. **Neon PostgreSQL URL (`NEON_DATABASE_URL`)**: Required for user state management, document chunk storage, and LangGraph Postgres checkpointer persistence.
+> 5. **JWT Secret Key (`JWT_SECRET_KEY`)**: Required for securing authentication sessions and token verification.
+>
+> *(Note: YouTube transcripts do **not** require an API key and work out of the box via `youtube-transcript-api`.)*
+
 ---
 
 ## 📋 Table of Contents
