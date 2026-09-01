@@ -47,6 +47,7 @@ pydantic-settings
 aiosqlite
 
 psycopg2-binary 
+psycopg[binary,pool]
 asyncpg 
 langgraph-checkpoint-postgres
 
